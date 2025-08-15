@@ -1,0 +1,13 @@
+{
+    "user_commands": {
+        "echo":"Responds with the same message."
+    },
+    "mod_commands": {
+        "startserver":"Starts up gameserver."
+},
+    "admin_commands": {
+        "wol":"Sends Wake-On-Lan packet. Current options include: kaseku, mizu, and gorilla. \nNote: WIFI only devices won't work.\nex. >wakeonlan kaseku",
+        "startserver":"Starts up the gameserver.",
+        "shutdownserver":"Shuts down the gameserver."
+    }
+}

@@ -1,0 +1,23 @@
+#docker build -t reviverbot .
+version: '3'
+
+services:
+    rundeck:
+        #image: reviverbot
+        build:
+          context: .
+          dockerfile: dockerfile
+        container_name: reviverbot
+        env_file:
+          - app/.env
+
+        networks:
+          mesh_net:
+            ipv4_address: 172.17.17.43
+        restart: always
+        volumes:
+          - ./app:/app:rw
+networks:
+  mesh_net:
+    name: mesh_net
+    external: true
